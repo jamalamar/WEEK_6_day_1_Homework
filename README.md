@@ -4,12 +4,12 @@
 
 -   Fork and clone this repo.
 -   This repo has nothing but a readme file please create a server with express and npm install these packages along with what you need for an express server `morgan` and `compression`.
--   In the root of your application create two folders `customers` and `products`. In each folder create two files `models.js` and`router.js` with their corresponding logic.
+-   In the root of your application create two folders `customers` and `products`. In each folder create two files `models.js` and `router.js` with their corresponding logic.
     1.  Create routes for each corresponding model for Create, Get, Update, and Delete using a `router.js` file.
-    1.  Create each corresponding view in a views folder using either `pug` of `ejs` for each route if its needed (delete routes will not need a seperate view).
+    2.  Create each corresponding view in a views folder using either `pug` of `ejs` for each route if its needed (delete routes will not need a seperate view).
 -   Apply all the nesecary middleware to the project with the following use cases:
     1. Morgan specify a log file for morgan to store the logged information.
-    1. Compress each request
+    2. Compress each request
 -   Make sure to stick to the MVC folder structure we have defined and after each step is completed please commit with a discriptive commit message
 
 ### Extras
