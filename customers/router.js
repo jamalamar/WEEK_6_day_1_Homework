@@ -16,6 +16,13 @@ router.post('/add-customer/', (request, response)=>{
   response.render('./customers', { customers })
 })
 
+// Update-Customer
+router.post('/update-customer', (request, response)=> {
+  let id = request.body['id']
+  let newCustomer = request.body['new-customer']
+  let customers = model.updateCustomer(id, newCustomer)
+  response.render('./customers', { customers })
+})
 
 
 module.exports = customerRouter
