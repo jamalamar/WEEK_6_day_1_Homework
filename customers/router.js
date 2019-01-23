@@ -24,5 +24,11 @@ router.post('/update-customer', (request, response)=> {
   response.render('./customers', { customers })
 })
 
+// Delete-Customer
+router.post('/remove-customer', (request, response)=> {
+  let customer = request.body['customer']
+  let customers = model.deleteCustomer(customer)
+  response.render('./customers', { customers })
+})
 
 module.exports = customerRouter
