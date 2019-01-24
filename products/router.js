@@ -13,7 +13,7 @@ router.get('/:id', (req, res)=> {
 // Get-Customer
 router.post('/add-product/', (req, res)=>{
   let newProduct = req.body['new-product']
-  let products = model.addCustomer(newProduct)
+  let products = model.addProduct(newProduct)
   res.render('./products', { products })
 })
 
