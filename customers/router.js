@@ -1,34 +1,34 @@
+
 let express = require('express')
 let router = express.Router()
 
 
 // Create-Customer
-router.get('/:id', (request, response)=> {
-  let id = request.params.id
+router.get('/:id', (req, res)=> {
+  let id = req.params.id
   let customer = model.getCustomer(id)
-  response.render('./customers', { customers, id })
+  res.render('./customers', { customers, id })
 })
 
 // Get-Customer
-router.post('/add-customer/', (request, response)=>{
-  let newCustomer = request.body['new-customer']
+router.post('/add-customer/', (req, res)=>{
+  let newCustomer = req.body['new-customer']
   let customers = model.addCustomer(newCustomer)
-  response.render('./customers', { customers })
+  res.render('./customers', { customers })
 })
 
 // Update-Customer
-router.post('/update-customer', (request, response)=> {
-  let id = request.body['id']
-  let newCustomer = request.body['new-customer']
+router.post('/update-customer', (req, res)=> {
+  let id = req.body['id']
+  let newCustomer = req.body['new-customer']
   let customers = model.updateCustomer(id, newCustomer)
-  response.render('./customers', { customers })
+  res.render('./customers', { customers })
 })
 
 // Delete-Customer
-router.post('/remove-customer', (request, response)=> {
-  let customer = request.body['customer']
+router.post('/remove-customer', (req, res)=> {
+  let customer = req.body['customer']
   let customers = model.deleteCustomer(customer)
-  response.render('./customers', { customers })
+  res.render('./customers', { customers })
 })
 
-module.exports = customerRouter
